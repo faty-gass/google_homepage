@@ -1,10 +1,10 @@
 <template>
-  <q-footer id="footerx" class="">
-    <p class="q-ml-md q-px-md q-py-sm">France</p>
+  <q-footer id="footerx">
+    <p class=" q-px-lg q-py-sm" id="country">France</p>
 
-    <div class="flex row flex-wrap justify-between q-gutter-md ">
+    <div class="flex row wrap justify-around q-gutter-md q-mb-sm ">
       <div class="q-mx-auto">
-        <img src="~assets/leaf.png" alt="leaf" style="width: 13px" />
+        <img src="~assets/leaf.png" alt="leaf" style="width: 1em" />
         <a
           class="links q-mx-sm"
           href="https://sustainability.google/intl/fr/commitments-europe/?utm_source=googlehpfooter&utm_medium=housepromos&utm_campaign=bottom-footer&utm_content="
@@ -90,8 +90,14 @@ export default {
 .links {
   text-decoration: none !important;
   color: rgb(82, 82, 82) !important;
+  font-size: 12px;
 }
 .links :hover {
   text-decoration: underline !important;
+}
+#country {
+  width: 100%;
+  border-top: solid rgb(213, 213, 213) 1px;
+  border-bottom: solid rgb(213, 213, 213) 1px;
 }
 </style>

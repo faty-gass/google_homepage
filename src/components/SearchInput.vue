@@ -1,19 +1,24 @@
 <template>
-  <div class="q-mx-sm">
-    <q-input rounded outlined style="min-width: 30em" v-model="text">
-      <template v-slot:prepend>
-        <q-icon name="search" />
-      </template>
-      <template v-slot:append>
-        <q-icon name="mic" @click="text = ''" class="cursor-pointer" />
-      </template>
-    </q-input>
+  <div class="q-mx-sm text-center">
+    <div id="searchbar">
+      <q-input rounded outlined v-model="text" dense>
+        <template v-slot:prepend>
+          <q-icon name="search" />
+        </template>
+        <template v-slot:append>
+          <q-icon name="mic" class="cursor-pointer" />
+          <q-tooltip content-class="bg-black"
+            >Utiliser la recherche vocale</q-tooltip
+          >
+        </template>
+      </q-input>
+    </div>
     <div class="text-center q-my-lg q-gutter-x-md">
       <q-btn
         color="grey-2"
         text-color="black"
-        text-weight-light
         label="Recherche Google"
+        @click="text = ''"
         no-caps
       />
       <q-btn
@@ -36,4 +41,14 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+#searchbar {
+  width: 50vw !important;
+}
+
+@media screen and (max-width: 850px) {
+  #searchbar {
+    width: 80vw !important;
+  }
+}
+</style>

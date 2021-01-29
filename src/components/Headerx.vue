@@ -1,19 +1,18 @@
 <template>
-  <div class="text-right q-ma-lg q-gutter-x-md">
+  <div class="text-right q-ma-md q-gutter-x-md">
     <a href="https://mail.google.com/mail/?tab=wm&ogbl">Gmail</a>
     <a href="https://www.google.fr/imghp?hl=fr&tab=wi&ogbl">Images</a>
     <q-btn icon="apps" flat text-color="grey-8">
-      <q-menu
-        anchor="bottom right"
-        self="top middle"
-        max-height="400px"
-        width="400px"
-      >
+      <q-menu anchor="bottom right" self="top middle" max-height="400px">
         <div
-          class="flex justify-between wrap q-pa-lg q-gutter-md"
-          style="width: 300px"
+          class="flex justify-between wrap q-pa-md q-gutter-y-sm"
+          style="width: 320px"
         >
-          <div class="text-center" v-for="(app, idx) in googlesApps" :key="idx">
+          <div
+            class="apps text-center q-px-md cursor-pointer"
+            v-for="(app, idx) in googlesApps"
+            :key="idx"
+          >
             <img
               :src="require('../assets/google_' + app + '.svg')"
               style="width:55px"
@@ -72,5 +71,11 @@ a:hover {
 }
 .logBtn {
   color: white !important;
+  font-weight: bold;
+}
+.apps:hover {
+  background: rgba(206, 220, 255, 0.604);
+  border: solid white 1px;
+  border-radius: 10px;
 }
 </style>
