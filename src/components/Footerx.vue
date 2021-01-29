@@ -1,27 +1,26 @@
 <template>
-  <q-footer id="footerx" class="q-pa-md">
-    <p class="q-ml-md">France</p>
-    <div class="q-gutter-md">
-      <div class="flex row flex-wrap justify-around q-gutter-md ">
-        <div>
-          <img src="~assets/leaf.png" alt="leaf" style="width: 13px" />
-          <a
-            class="links q-mx-sm"
-            href="https://sustainability.google/intl/fr/commitments-europe/?utm_source=googlehpfooter&utm_medium=housepromos&utm_campaign=bottom-footer&utm_content="
-            >Neutre en carbonne depuis 2007</a
-          >
-        </div>
-        <div class="q-gutter-md">
-          <a
-            v-for="(item, idx) in footerLinks1"
-            :key="idx"
-            :href="item.link"
-            class="links text-no-wrap"
-            >{{ item.content }}</a
-          >
-        </div>
+  <q-footer id="footerx" class="">
+    <p class="q-ml-md q-px-md q-py-sm">France</p>
+
+    <div class="flex row flex-wrap justify-between q-gutter-md ">
+      <div class="q-mx-auto">
+        <img src="~assets/leaf.png" alt="leaf" style="width: 13px" />
+        <a
+          class="links q-mx-sm"
+          href="https://sustainability.google/intl/fr/commitments-europe/?utm_source=googlehpfooter&utm_medium=housepromos&utm_campaign=bottom-footer&utm_content="
+          >Neutre en carbonne depuis 2007</a
+        >
       </div>
-      <div class="flex row q-gutter-md ">
+      <div class="q-gutter-x-md q-mx-auto">
+        <a
+          v-for="(item, idx) in footerLinks1"
+          :key="idx"
+          :href="item.link"
+          class="links text-no-wrap"
+          >{{ item.content }}</a
+        >
+      </div>
+      <div class="flex row q-gutter-x-md q-mx-auto ">
         <a
           v-for="(item, idx) in footerLinks2"
           :key="idx"
